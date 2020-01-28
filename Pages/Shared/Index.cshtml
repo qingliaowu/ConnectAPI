@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="topDiv" style="width: 700px; min-width: 700px; margin-left: 200px;">
+        <div id="myApp">
+            <h2>Subscribing to Streams Events</h2>
+        </div>
+    </div>
+    <div id="gridDiv" style="display: grid; grid-template-columns: 350px 400px 400px">
+        <div id="containerDiv" style="width: 320px; min-width: 200px; height: 465px; min-height: 400px; display: none;">
+            <!--Amazon CCP is hiding in here-->
+        </div>
+        <div id="customCCPDiv" style="width: 320px; min-width: 200px; height: 465px; min-height: 400px; border-style: dotted; border-color: gray; border-width: thick;">
+            <!-- custom user experience goes here -->
+            <div id="statusDiv">
+                <div id="agentGreetingDiv" style="padding: 5px;">
+                    <!-- say hi to the agent -->
+                </div>
+                <div id="agentStatusDiv" style="padding: 5px;">
+                </div>
+                <div id="goAvailableDiv" style="background-color: green; padding: 10px; margin: 10px 60px 10px 60px">
+                    <button type="button" onclick="goAvailable()">Go Available</button><br />
+                </div>
+                <div id="goOfflineDiv" style="background-color: gray; padding: 10px; margin: 10px 60px 10px 60px">
+                    <button onclick="goOffline()">Go Offline</</button><br />
+</div>
+            </div>
+            <div id="contactActionsDiv">
+                <div id="answerDiv" style="border-style: solid; border-color: black; border-width: medium; padding: 10px; margin: 10px 60px 10px 60px">
+                    <button id="Call" onclick="callNumber()">Звони</button>
+                </div>
+                <div id="" style="border-style: solid; border-color: black; border-width: medium; padding: 10px; margin: 10px 60px 10px 60px">
+                    <button id="disconnect" onclick="disconnectContact()">Положить трубку</button>
+                </div>
+            </div>
+        </div>
+        <div id="logMsgsContainer">
+            <h2>Log Messages</h2>
+            <div id="logMsgs" style="height: 465px; overflow: auto;">
+                <!-- log messages will go here -->
+            </div>
+        </div>
+        <div id="eventMsgsContainer">
+            <h2>Event Messages</h2>
+            <div id="eventMsgs" style="height: 465px; overflow: auto;">
+                <!-- events from Streams API will go here-->
+            </div>
+        </div>
+</div>
+<script src="js/connect-streams.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
